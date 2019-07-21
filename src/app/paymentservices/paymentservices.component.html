@@ -1,0 +1,7 @@
+<h3>List of all the services provided</h3>
+<ul>
+    <li *ngFor="let paymentService of paymentServices">
+        {{paymentService.name}} ({{paymentService.providerName}})
+        - <a (click)="viewBillDetails(paymentService.id)" class="text-danger">Extract Bill Details</a>
+    </li>
+</ul>

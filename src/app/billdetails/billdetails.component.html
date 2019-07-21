@@ -1,0 +1,35 @@
+<h3>Pay Bill for {{billDetails.servicename}}</h3>
+<section>
+    <div class="col-lg-12 col-sm-8 form-group">
+        <div>
+            <label class="col-lg-6 description-header">State</label>
+            <input class="col-lg-6 description-header" type="text" value="{{billDetails.state}}">
+        </div>
+        <div>
+            <label class="col-lg-6 description-header" >Provider</label>
+            <input class="col-lg-6 description-header" type="text" value="{{billDetails.provider}}">
+        </div>
+        <div>
+            <label class="col-lg-6 description-header" >Customer ID/Unique ID</label>
+            <input class="col-lg-6 description-header" type="text" value="{{billDetails.uniqueid}}">
+        </div>
+        <div>
+            <label class="col-lg-6 description-header" >Consumer Name</label>
+            <input class="col-lg-6 description-header"  type="text" value="{{billDetails.customername}}">
+        </div>
+        <div>
+            <label class="col-lg-6 description-header" >Due Date</label>
+            <input class="col-lg-6 description-header"  type="text" value="{{billDetails.duedate}}">
+        </div>
+        <div>
+            <label class="col-lg-6 description-header" >Bill Number</label>
+            <input class="col-lg-6 description-header"  type="text" value="{{billDetails.billnumber}}">
+        </div>
+        <div>
+            <label class="col-lg-6 description-header" >Amount</label>
+            <input class="col-lg-6 description-header"  type="text" value="{{billDetails.amount}}">
+        </div>
+        <input style="background-color: cadetblue" type="button" value="Proceed to pay" title="Click here to pay">
+    </div>
+
+</section>

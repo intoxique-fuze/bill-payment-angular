@@ -4,6 +4,7 @@ import { first } from 'rxjs/operators';
 import {ActivatedRoute} from '@angular/router';
 import { User, BillDetail, PaymentService } from '@app/_models';
 import { UserService,BillPaymentsService, AuthenticationService } from '@app/_services';
+import { Router } from '@angular/router';
 
 @Component({ templateUrl: 'billdetails.component.html' })
 export class BillDetailsComponent implements OnInit,OnDestroy {
@@ -16,7 +17,8 @@ export class BillDetailsComponent implements OnInit,OnDestroy {
         private authenticationService: AuthenticationService,
         private userService: UserService,
         private billPaymentsService: BillPaymentsService,
-        private route :ActivatedRoute
+        private route :ActivatedRoute,
+        private router: Router
     ) {
         this.currentUserSubscription = this.authenticationService.currentUser.subscribe(user => {
             this.currentUser = user;
@@ -48,5 +50,10 @@ export class BillDetailsComponent implements OnInit,OnDestroy {
                 billnumber : 'BLR8123424578930',
                 customername: this.currentUser.firstName + this.currentUser.lastName
              };
+    }
+
+    proceedWithPayment(id: number)
+    {
+        this.router.navigate(['/paymentmodes/'+id]);
     }
 }

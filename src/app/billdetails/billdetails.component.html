@@ -29,7 +29,7 @@
             <label class="col-lg-6 description-header" >Amount</label>
             <input class="col-lg-6 description-header"  type="text" value="{{billDetails.amount}}">
         </div>
-        <input style="background-color: cadetblue" type="button" value="Proceed to pay" title="Click here to pay">
+        <input style="background-color: cadetblue" (click)="proceedWithPayment()" type="button" value="Proceed to pay" title="Click here to pay">
     </div>
 
 </section>

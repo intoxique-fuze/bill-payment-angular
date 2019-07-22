@@ -16,6 +16,7 @@ import { LoginComponent } from './login';
 import { PaymentServicesComponent } from './paymentservices';
 import { BillDetailsComponent } from './billdetails';
 import { RegisterComponent } from './register';
+import { PaymentModesComponent } from './paymentmodes';
 
 @NgModule({
     imports: [
@@ -31,6 +32,7 @@ import { RegisterComponent } from './register';
         LoginComponent,
         PaymentServicesComponent,
         BillDetailsComponent,
+        PaymentModesComponent,
         RegisterComponent
     ],
     providers: [

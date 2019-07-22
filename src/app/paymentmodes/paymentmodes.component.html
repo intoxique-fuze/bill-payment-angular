@@ -1,0 +1,6 @@
+<h3>Select Payment Mode</h3>
+<div>
+    <div *ngFor="let paymentMode of paymentModes">
+            <input class="btn btn-outline-secondary" style="width: 180px" (click)="initiatePaymentGateway()" type="button" value="{{paymentMode.title}}">
+    </div>
+</div>
